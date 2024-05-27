@@ -5,14 +5,17 @@
     <title>Home</title>
 </head>
 <body>
-    <form method="post">
+    <form method="post" enctype="multipart/form-data">
         {% csrf_token %}
-        <label for="email">Email:</label>
-        <input type="email" name="email">
+        <label for="to">To:</label>
+        <input type="text" name="to" placeholder="Emails (separate with comma)">
+        <label for="bcc">Bcc:</label>
+        <input type="text" name="bcc" placeholder="Emails (separate with comma)">
         <label for="subject">Subject:</label>
         <input type="text" name="subject">
         <label for="body">Body:</label>
         <input type="text" name="body">
+        <input type="file" name="file">
         <button type="submit">Send the Mail!</button>
     </form>
 </body>
