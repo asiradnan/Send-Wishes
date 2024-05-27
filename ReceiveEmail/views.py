@@ -16,7 +16,7 @@ def home(request):
             email.send()
             messages.success(request,"Successfully sent the mail!")
         except:
-            messages.error(request,"There was an sending the mail")
+            messages.error(request,"There was an error sending the mail")
         return redirect("/")
         # if x==0:
         #     return HttpResponse("Error occured")
