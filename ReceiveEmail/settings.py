@@ -124,7 +124,7 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 EMAIL_HOST="smtp.gmail.com"
-# EMAIL_PORT=
+EMAIL_PORT=587
 EMAIL_HOST_USER="verifywithasir@gmail.com"
 EMAIL_HOST_PASSWORD=os.environ.get("pass")
 EMAIL_USE_TLS=True
