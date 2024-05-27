@@ -14,9 +14,9 @@ def home(request):
             if file is not None:
                 email.attach(file.name, file.read(), file.content_type)
             email.send()
-            messages.success(request,"Success!")
+            messages.success(request,"Successfully sent the mail!")
         except:
-            messages.error(request,"Failed")
+            messages.error(request,"There was an sending the mail")
         return redirect("/")
         # if x==0:
         #     return HttpResponse("Error occured")
