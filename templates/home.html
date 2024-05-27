@@ -5,6 +5,7 @@
     <title>Home</title>
 </head>
 <body>
+    {% for m in messages %} {{m}} {% endfor %}
     <form method="post" enctype="multipart/form-data">
         {% csrf_token %}
         <label for="to">To:</label>
