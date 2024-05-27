@@ -2,6 +2,7 @@ from django.core.mail import EmailMessage
 from django.shortcuts import render,redirect
 from . import settings
 from django.contrib import messages
+
 def home(request):
     if request.method=="POST":
         subject = request.POST['subject']
@@ -18,8 +19,5 @@ def home(request):
         except:
             messages.error(request,"There was an error sending the mail")
         return redirect("/")
-        # if x==0:
-        #     return HttpResponse("Error occured")
-        # return HttpResponse("Sent successfully!")
     return render(request,"home.html")
     
