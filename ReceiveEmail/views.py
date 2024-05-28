@@ -7,15 +7,14 @@ def home(request):
     if request.method=="POST":
         subject = request.POST['subject']
         body = request.POST['body']
-        to_list = request.POST['to'].split(',')
-        bcc_list = request.POST['bcc'].split(',')
+        to = request.POST['to']
         file = request.FILES.get('file',None)
         try:
-            email = EmailMessage(subject,body,settings.EMAIL_HOST_USER,to_list,bcc_list)
+            email = EmailMessage(subject,body,settings.EMAIL_HOST_USER,[to])
             if file is not None:
                 email.attach(file.name, file.read(), file.content_type)
-            email.send()
-            messages.success(request,"Successfully sent the mail!")
+            print(email.send())
+            messages.success(request,"The mail is sent successfully!")
         except:
             messages.error(request,"There was an error sending the mail")
         return redirect("/")

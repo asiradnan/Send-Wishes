@@ -2,22 +2,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <link href='https://fonts.googleapis.com/css?family=Manrope' rel='stylesheet'>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'home.css' %}">
+    <link rel="shortcut icon" type="image/png" href="{% static 'favicon.png' %}"/>
+    <title>Send Email</title>
 </head>
 <body>
-    {% for m in messages %} {{m}} {% endfor %}
+    {% for m in messages %} <article>{{m}}</article> {% endfor %}
     <form method="post" enctype="multipart/form-data">
         {% csrf_token %}
-        <label for="to">To:</label>
-        <input type="text" name="to" placeholder="Emails (separate with comma)">
-        <label for="bcc">Bcc:</label>
-        <input type="text" name="bcc" placeholder="Emails (separate with comma)">
-        <label for="subject">Subject:</label>
-        <input type="text" name="subject">
-        <label for="body">Body:</label>
-        <input type="text" name="body">
-        <input type="file" name="file">
-        <button type="submit">Send the Mail!</button>
+        <header><p>New Email</p></header>
+        <!-- <label for="to">To:</label> -->
+        <input type="email" id="to" name="to" placeholder="To" required>
+        <!-- <label for="subject">Subject:</label> -->
+        <input type="text" name="subject" placeholder="Subject">
+        <!-- <label for="body">Body:</label> -->
+        <textarea name="body" id="body"></textarea>
+        <footer>
+            <button class="custom-file-upload">
+                <input type="file" name="file">
+                Attach File
+            </button>
+            <button type="submit">Send</button>
+        </footer>
     </form>
 </body>
 </html>
