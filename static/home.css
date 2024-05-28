@@ -88,3 +88,36 @@ button{
     vertical-align: middle;
     font-size: 15px;
 }
+@media (max-width: 600px) {
+    body {
+        grid-template-columns: 100%;
+    }
+    article {
+        width: 90%;
+        font-size: 16px;
+    }
+    input, textarea {
+        width: calc(100% - 40px);
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    input[type="file"] {
+        width: 100%;
+    }
+    header p {
+        font-size: 18px;
+        margin-left: 10px;
+    }
+    button {
+        font-size: 14px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    footer {
+        grid-template-columns: auto 75px;
+        height: 45px;
+    }
+    form {
+        box-shadow: none;
+    }
+}
