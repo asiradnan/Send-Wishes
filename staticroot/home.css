@@ -5,13 +5,14 @@ body{
     background-color: burlywood;
     justify-items: center;
     font-family: 'Manrope',sans-serif;
+    grid-template-rows: 10vh auto;
 }
 article{
     min-width: 300px;
     max-width: 400px;
     background-color: antiquewhite;
     border: 0.5px solid rgb(174, 145, 107);
-    padding: 5px;
+    padding: 5px 20px 5px 20px;
     text-align: center;
     font-size: 17px;
     color: black;

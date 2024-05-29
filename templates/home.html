@@ -9,7 +9,11 @@
     <title>Send Wishes</title>
 </head>
 <body>
-    {% for m in messages %} <article>{{m}}</article> {% endfor %}
+    {% for m in messages %}
+        {% if forloop.first %}
+            <article>{{m}}</article> 
+        {% endif %}
+    {% endfor %}
     <form method="post" enctype="multipart/form-data">
         {% csrf_token %}
         <header><p>New Email</p></header>

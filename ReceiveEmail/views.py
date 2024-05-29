@@ -18,5 +18,6 @@ def home(request):
         except:
             messages.error(request,"There was an error sending the mail")
         return redirect("/")
+    messages.info(request,"Send wishes to anyone from an anonymous email!")
     return render(request,"home.html")
     
