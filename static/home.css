@@ -90,10 +90,7 @@ button{
     font-size: 15px;
 }
 @media screen and (max-width: 1200px) {
-    form{
-        margin: 15px;
-    }
-    textarea{
-        min-height: 50vh;
+    body{
+        grid-template-columns: minmax(300px,750px);
     }
 }
