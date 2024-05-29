@@ -89,9 +89,9 @@ button{
     vertical-align: middle;
     font-size: 15px;
 }
-@media (max-width: 1200px) {
-    body{
-        grid-template-columns: 90%;
+@media screen and (max-width: 1200px) {
+    form{
+        margin: 15px;
     }
     textarea{
         min-height: 50vh;
