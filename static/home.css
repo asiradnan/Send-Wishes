@@ -8,7 +8,8 @@ body{
     font-family: 'Manrope',sans-serif;
 }
 article{
-    width: 350px;
+    min-width: 300px;
+    max-width: 400px;
     background-color: antiquewhite;
     border: 0.5px solid rgb(174, 145, 107);
     padding: 5px;
@@ -90,14 +91,9 @@ button{
 }
 @media (max-width: 1200px) {
     body{
-        grid-template-columns: 95%
+        grid-template-columns: 90%;
     }
     textarea{
-        width: calc(100% - 60px);
-        font-size: 20px;
-        border-radius: 16px;
-        border: none;
-        min-height: 60vh;
-        margin: 5px 30px 10px 30px;
+        min-height: 50vh;
     }
 }
