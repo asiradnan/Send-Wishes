@@ -1,6 +1,5 @@
 body{
     display: grid;
-    grid-template-columns: minmax(400px,750px);
     justify-content: center;
     align-items: center;
     background-color: burlywood;
@@ -88,6 +87,11 @@ button{
     margin-right: 10px;
     vertical-align: middle;
     font-size: 15px;
+}
+@media screen and (min-width: 1200px) {
+    body{
+        grid-template-columns: minmax(400px,750px);
+    }
 }
 @media screen and (max-width: 1200px) {
     body{
