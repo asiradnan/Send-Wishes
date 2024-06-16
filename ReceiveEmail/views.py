@@ -20,4 +20,7 @@ def home(request):
         return redirect("/")
     messages.info(request,"Send wishes to anyone from an anonymous email!")
     return render(request,"home.html")
+
+def custom404(request):
+    return render(request,"404.html")
     
