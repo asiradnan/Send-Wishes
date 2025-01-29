@@ -47,7 +47,7 @@ USE_I18N = True
 USE_TZ = True
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
-STATIC_ROOT = 'staticfiles' if os.environ.get("development") else "/var/www/receiveemail_staticfiles"
+STATIC_ROOT = 'staticfiles' if os.environ.get("development")=="True" else "/var/www/receiveemail_staticfiles"
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 EMAIL_HOST="smtp.gmail.com"
 EMAIL_PORT=587
