@@ -9,6 +9,7 @@ def home(request):
         body = request.POST['body']
         to = request.POST['to']
         file = request.FILES.get('file',None)
+        print(file)
         try:
             email = EmailMessage(subject,body,settings.EMAIL_HOST_USER,[to])
             if file is not None:

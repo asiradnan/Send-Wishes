@@ -24,12 +24,29 @@
         <!-- <label for="body">Body:</label> -->
         <textarea name="body" id="body"></textarea>
         <footer>
-            <button class="custom-file-upload">
+            <label class="custom-file-upload">
                 <input type="file" name="file">
-                Attach File
-            </button>
+                <span class="file-text">Attach File</span>
+            </label>
             <button type="submit">Send</button>
         </footer>
     </form>
+    <script>
+    const fileInput = document.querySelector('input[type="file"]');
+    const fileText = document.querySelector('.file-text');
+    const deleteBtn = document.querySelector('.delete-file');
+
+    fileInput.addEventListener('change', function() {
+        const fileName = this.files[0]?.name;
+        fileText.textContent = fileName || 'Attach File';
+        deleteBtn.style.display = fileName ? 'inline-flex' : 'none';
+    });
+
+    deleteBtn.addEventListener('click', function() {
+        fileInput.value = '';
+        fileText.textContent = 'Attach File';
+        this.style.display = 'none';
+    });
+</script>
 </body>
 </html>

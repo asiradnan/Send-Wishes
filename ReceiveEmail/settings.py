@@ -5,7 +5,7 @@ load_dotenv()
 BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 SECRET_KEY = os.environ.get("secret_key")
-DEBUG = False
+DEBUG = os.environ.get("development")
 ALLOWED_HOSTS = ["127.0.0.1",".asiradnan.com",".now.sh"]
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -23,7 +23,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware'
 ]
 ROOT_URLCONF = 'ReceiveEmail.urls'
 TEMPLATES = [

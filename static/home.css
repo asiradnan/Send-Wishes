@@ -89,6 +89,25 @@ button{
     vertical-align: middle;
     font-size: 15px;
 }
+.custom-file-upload {
+    background-color: aliceblue;
+    border: aliceblue;
+    height: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 20px;
+    margin-right: 10px;
+    vertical-align: middle;
+    font-size: 15px;
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    color: buttontext;
+    font-family: 'Manrope', sans-serif;
+}
+.custom-file-upload input[type="file"] {
+    display: none;
+}
 @media screen and (min-width: 1200px) {
     body{
         grid-template-columns: minmax(400px,750px);
