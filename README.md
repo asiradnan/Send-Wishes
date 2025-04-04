@@ -1,8 +1,9 @@
 # Send Wish 🎉  
-[Send Wish](https://sendwish.asiradnan.com) – Send anonymous wishes via email with a simple UI.  
+[Send Wish](https://sendwish.asiradnan.com) – Send wishes to whoever you want without revealing your identity!  
 
 ## ✨ Features  
 ✅ Send wishes to anyone from `anonymouswisher00@gmail.com`  
+✅ Stay anonymous – your identity remains hidden  
 ✅ Clean and simple user interface  
 ✅ Built with Django for backend processing  
 
